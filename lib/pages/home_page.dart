@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
 
   void _toggleTimer1() {
     if (!_isRunning1) {
-      _totalMoves1++;
       _isRunning1 = true;
       _won1 = false;
       _timer1 = Timer.periodic(const Duration(seconds: 1), (Timer timer) {
@@ -50,13 +49,13 @@ class _HomePageState extends State<HomePage> {
     } else {
       _isRunning1 = false;
       _timer1.cancel();
+      _totalMoves1++;
       _toggleTimer2();
     }
   }
 
   void _toggleTimer2() {
     if (!_isRunning2) {
-      _totalMoves2++;
       _isRunning2 = true;
       _won2 = false;
       _timer2 = Timer.periodic(const Duration(seconds: 1), (Timer timer) {
@@ -75,6 +74,7 @@ class _HomePageState extends State<HomePage> {
     } else {
       _isRunning2 = false;
       _timer2.cancel();
+      _totalMoves2++;
       _toggleTimer1();
     }
   }
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
       return '00:00';
     }
 
-    var averageTimePerMove = timePassedInSeconds / (totalMoves - 1);
+    var averageTimePerMove = timePassedInSeconds / totalMoves;
     var averageMinutes = (averageTimePerMove / 60).floor();
     var averageSeconds = (averageTimePerMove % 60).toInt();
 
@@ -147,9 +147,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
-    final checkmate = localizations != null ? localizations.checkmate : 'checkmate';
+    final checkmate =
+        localizations != null ? localizations.checkmate : 'checkmate';
     final check = localizations != null ? localizations.check : 'check';
-
 
     return Scaffold(
       body: Container(
