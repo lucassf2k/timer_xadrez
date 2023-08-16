@@ -277,11 +277,13 @@ class _HomePageState extends State<HomePage> {
                                             const SizedBox(
                                               height: 20.0,
                                             ),
-                                            Align(
-                                              alignment: Alignment.topLeft,
+                                            Container(
+                                              padding:
+                                                  const EdgeInsets.all(4.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
+                                                    textAlign: TextAlign.left,
                                                     '$totalMovements: $_totalMoves1',
                                                     style: const TextStyle(
                                                       fontSize: 22,
@@ -324,8 +326,8 @@ class _HomePageState extends State<HomePage> {
                                         const SizedBox(
                                           height: 20,
                                         ),
-                                        Align(
-                                          alignment: Alignment.topLeft,
+                                        Container(
+                                          padding: const EdgeInsets.all(4.0),
                                           child: Column(
                                             children: <Widget>[
                                               Text(
