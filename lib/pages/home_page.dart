@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:timer_xadrez/core/app_colors.dart';
 import 'package:timer_xadrez/core/app_text.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -121,6 +122,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+    final checkmate = localizations != null ? localizations.checkmate : 'checkmate';
+    final check = localizations != null ? localizations.check : 'check';
+
+
     return Scaffold(
       body: Container(
         padding: const EdgeInsetsDirectional.symmetric(
@@ -170,8 +176,8 @@ class _HomePageState extends State<HomePage> {
                                 backgroundColor:
                                     MaterialStatePropertyAll(AppColors.green),
                               ),
-                              child: const Text(
-                                'checkmate',
+                              child: Text(
+                                checkmate,
                                 style: AppText.body,
                               ),
                             ),
@@ -188,8 +194,8 @@ class _HomePageState extends State<HomePage> {
                                 backgroundColor:
                                     MaterialStatePropertyAll(AppColors.green),
                               ),
-                              child: const Text(
-                                'check',
+                              child: Text(
+                                check,
                                 style: AppText.body,
                               ),
                             ),
@@ -247,8 +253,8 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor:
                                 MaterialStatePropertyAll(AppColors.green),
                           ),
-                          child: const Text(
-                            'check',
+                          child: Text(
+                            check,
                             style: AppText.body,
                           ),
                         ),
@@ -261,8 +267,8 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor:
                                 MaterialStatePropertyAll(AppColors.green),
                           ),
-                          child: const Text(
-                            'checkmate',
+                          child: Text(
+                            checkmate,
                             style: AppText.body,
                           ),
                         ),
