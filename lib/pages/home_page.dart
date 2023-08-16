@@ -150,6 +150,8 @@ class _HomePageState extends State<HomePage> {
     final checkmate =
         localizations != null ? localizations.checkmate : 'checkmate';
     final check = localizations != null ? localizations.check : 'check';
+    final totalMovements = localizations?.totalMovements;
+    final avarageTimePerMove = localizations?.averageTimePerMove;
 
     return Scaffold(
       body: Container(
@@ -280,7 +282,7 @@ class _HomePageState extends State<HomePage> {
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
-                                                    'Total de movimentos: $_totalMoves1',
+                                                    '$totalMovements: $_totalMoves1',
                                                     style: const TextStyle(
                                                       fontSize: 22,
                                                       color: AppColors.text,
@@ -290,7 +292,7 @@ class _HomePageState extends State<HomePage> {
                                                     height: 8.0,
                                                   ),
                                                   Text(
-                                                    'Tempo médio por rodada: ${_getTimerPerMoves(totalMoves: _totalMoves1, minutes: _minutes1, seconds: _seconds1)}',
+                                                    '$avarageTimePerMove: ${_getTimerPerMoves(totalMoves: _totalMoves1, minutes: _minutes1, seconds: _seconds1)}',
                                                     style: const TextStyle(
                                                       fontSize: 22,
                                                       color: AppColors.text,
@@ -327,14 +329,14 @@ class _HomePageState extends State<HomePage> {
                                           child: Column(
                                             children: <Widget>[
                                               Text(
-                                                'Total de movimentos: $_totalMoves2',
+                                                '$totalMovements: $_totalMoves2',
                                                 style: const TextStyle(
                                                   fontSize: 22,
                                                   color: AppColors.text,
                                                 ),
                                               ),
                                               Text(
-                                                'Tempo médio por rodada: ${_getTimerPerMoves(totalMoves: _totalMoves2, minutes: _minutes2, seconds: _seconds2)}',
+                                                '$avarageTimePerMove: ${_getTimerPerMoves(totalMoves: _totalMoves2, minutes: _minutes2, seconds: _seconds2)}',
                                                 style: const TextStyle(
                                                   fontSize: 22,
                                                   color: AppColors.text,

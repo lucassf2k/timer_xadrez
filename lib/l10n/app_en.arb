@@ -1,4 +1,6 @@
 {
   "checkmate": "Checkmate",
-  "check": "Check"
+  "check": "Check",
+  "totalMovements": "Total movements",
+  "averageTimePerMove": "Average time per move"
 }

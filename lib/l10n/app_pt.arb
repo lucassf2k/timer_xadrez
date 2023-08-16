@@ -1,4 +1,6 @@
 {
   "checkmate": "Xequemate",
-  "check": "Xeque"
+  "check": "Xeque",
+  "totalMovements": "Total de movimentos",
+  "averageTimePerMove": "Tempo médio por jogada"
 }
