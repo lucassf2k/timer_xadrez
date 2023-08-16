@@ -1,4 +1,8 @@
 {
   "checkmate": "Checkmate",
-  "check": "Check"
+  "check": "Check",
+  "matchHistory": "Match History",
+  "profile": "Profile",
+  "startMatch": "Start Match",
+  "ranking": "Ranking"
 }

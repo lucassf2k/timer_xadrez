@@ -1,4 +1,8 @@
 {
   "checkmate": "Xequemate",
-  "check": "Xeque"
+  "check": "Xeque",
+  "matchHistory": "Histórico de partidas",
+  "profile": "Perfil",
+  "startMatch": "Iniciar partida",
+  "ranking": "Ranque"
 }
