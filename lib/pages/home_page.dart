@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
   late Timer _timer1;
   bool _won1 = false;
   int _totalMoves1 = 0;
-  double _timePerMove1 = 0;
 
   // Player 2
   int _minutes2 = 15;
@@ -28,7 +27,6 @@ class _HomePageState extends State<HomePage> {
   late Timer _timer2;
   bool _won2 = false;
   int _totalMoves2 = 0;
-  double _timerPerMove2 = 0;
 
   void _toggleTimer1() {
     if (!_isRunning1) {
